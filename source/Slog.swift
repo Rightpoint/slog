@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class Log {
+open class Slog {
     // MARK: Configuration
     /**
      Represents a level of detail to be logged.

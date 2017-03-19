@@ -1,0 +1,1 @@
+../../source/Slog+CheckError.swift
