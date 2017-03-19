@@ -1,0 +1,6 @@
+framework module Pods_Slog_Tests {
+  umbrella header "Pods-Slog_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

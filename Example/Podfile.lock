@@ -1,0 +1,16 @@
+PODS:
+  - Slog (0.1.0)
+
+DEPENDENCIES:
+  - Slog (from `../`)
+
+EXTERNAL SOURCES:
+  Slog:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Slog: 355317e45c4e3bc1e26384d3c26dbe938dc2d572
+
+PODFILE CHECKSUM: 617067a7c37313c25337da2bed6e822250e357d0
+
+COCOAPODS: 1.2.0
