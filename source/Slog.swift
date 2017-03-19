@@ -10,9 +10,8 @@ import Foundation
 
 open class Slog {
     // MARK: Configuration
-    /**
-     Represents a level of detail to be logged.
-     */
+
+    /// Represents a level of detail to be logged.
     public enum Level: Int {
         case verbose
         case debug
@@ -92,7 +91,7 @@ open class Slog {
     }
 
     /// Generic log method
-    fileprivate func log<T>(_ object: @autoclosure () -> T, level: Log.Level, _ fileName: String, _ functionName: String, _ line: Int) {
+    fileprivate func log<T>(_ object: @autoclosure () -> T, level: Slog.Level, _ fileName: String, _ functionName: String, _ line: Int) {
         if logLevel.rawValue <= level.rawValue {
             let date = dateformatter.string(from: Date())
             let components: [String] = fileName.components(separatedBy: "/")
