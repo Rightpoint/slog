@@ -1,9 +1,9 @@
 {
   "name": "Slog",
   "version": "0.1.0",
-  "summary": "A short description of Slog.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/johnstricker/Slog",
+  "summary": "Simple Swift logging",
+  "description": "Simple swift logging",
+  "homepage": "https://github.com/Raizlabs/Slog",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,11 @@
     "johnstricker": "john.stricker@raizlabs.com"
   },
   "source": {
-    "git": "https://github.com/johnstricker/Slog.git",
+    "git": "https://github.com/Raizlabs/Slog.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "Slog/Classes/**/*"
 }
