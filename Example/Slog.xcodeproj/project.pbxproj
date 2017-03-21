@@ -44,6 +44,7 @@
 		6B6311355738071DD45BB840 /* Pods_Slog_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Slog_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		723965DBBEF21CB1F9E40E0D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		781B6B66CB3166D7766D326D /* Pods-Slog_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slog_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Slog_Example/Pods-Slog_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8A39AA651E817A6400D22FD2 /* Slog.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Slog.playground; sourceTree = "<group>"; };
 		8E6A03E9A860064ECF5ECBD1 /* Slog.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Slog.podspec; path = ../Slog.podspec; sourceTree = "<group>"; };
 		CBC555728FF6CB47E853E406 /* Pods-Slog_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slog_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Slog_Tests/Pods-Slog_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DD1F92E9041606DF318D7F98 /* Pods-Slog_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slog_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Slog_Example/Pods-Slog_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		607FACD21AFB9204008FA782 /* Example for Slog */ = {
 			isa = PBXGroup;
 			children = (
+				8A39AA651E817A6400D22FD2 /* Slog.playground */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
