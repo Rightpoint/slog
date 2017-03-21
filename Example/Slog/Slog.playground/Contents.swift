@@ -2,7 +2,7 @@
 
 import Slog
 
-let log = Slog(level: .verbose, useEmoji: true)
+let log = Slog(name: "TEST", level: .verbose, useEmoji: true)
 
 log.error("Here's an error")
 
