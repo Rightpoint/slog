@@ -17,7 +17,7 @@ extension Slog {
         if index < count {
             return true
         } else {
-            report(index: index, outOfBoundsFor: array, fileName, functionName, line)
+            report(index: index, outOfBoundsOf: array, fileName, functionName, line)
             return false
         }
     }
