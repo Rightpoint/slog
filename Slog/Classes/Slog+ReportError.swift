@@ -10,7 +10,7 @@
 extension Slog {
 
     /// Report Index out of bounds for an array
-    public func report<T>(index: Int, outOfBoundsFor array: [T]?, count: Int? = nil, _ fileName: String = #file, _ functionName: String = #function, _ line: Int = #line) {
+    public func report<T>(index: Int, outOfBoundsOf array: [T]?, count: Int? = nil, _ fileName: String = #file, _ functionName: String = #function, _ line: Int = #line) {
 
         guard let array = array else {
             error("Index \(index) is out of bounds for nil array", fileName, functionName, line)
