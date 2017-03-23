@@ -23,20 +23,24 @@ Then you can log with functions for each of the log levels (with their associate
 * off
 
 For example:
-```Swift-3
+
+```swift
 log.error("This is an error!")
 ```
 Setting the level of a log will only print out those logs at that level or above.
-```Swift-3
+
+```swift
 log.level = .verbose
 ```
 You can also initialize a log with a name. You may want to have different logs for App Lifecycle, API, UI, Data, etc. This would allow you to have different logs & set different log levels depending upon what you are trying to monitor or track down. The log name will be printed out as part of any log message for that log.
-```Swift-3
+
+```swift
 let lifeCycleLog = Slog(name:"LifeCycle", level: .verbose, useEmoji: true)
 ```
 
 You could use this log in the AppDelegate to monitor app lifecycles. For example putting this code in `didFinishLaunchingWithOptions`:
-```Swift-3
+
+```swift
 lifeCycleLog.verbose("App finished launching with options \(launchOptions)")
 ```
 
@@ -53,18 +57,20 @@ Checks are designed to check if a condition is fulfilled, if it is not then an e
 This is currently under development, so feel free to suggest new checks & reports as issues (or PRs).
 
 ### Checks
-```Swift-3
-  // index is within the bounds of an array
-  check(index:, isInBoundsOf:)
+
+```swift
+// index is within the bounds of an array
+check(index:, isInBoundsOf:)
 ```
 
 ### Reports
-```Swift-3
-  // index is out of bounds of an array
-  report(index:, outOfBoundsOf: )
 
-  // unxpected nil for a variable
-  report(unexpectedNil:)
+```swift
+// index is out of bounds of an array
+report(index:, outOfBoundsOf: )
+
+// unxpected nil for a variable
+report(unexpectedNil:)
 ```
 
 
@@ -82,9 +88,11 @@ pod "Slog"
 ```
 
 If you don't want to use the check and report features, then you can use the LogOnly subspec:
+
 ```ruby
 pod "Slog/LogOnly"
 ```
+
 ## Author
 
 johnstricker, john.stricker@raizlabs.com
