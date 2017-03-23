@@ -44,7 +44,8 @@ would print:
 
 ```
 📖|LifeCycle|2017-03-23 10:55:37.193 AppDelegate.swift application(_:didFinishLaunchingWithOptions:) line 22:
-App did finish launching with options: nil```
+App did finish launching with options: nil
+```
 
 ## Check and Report (under development)
 Checks are designed to check if a condition is fulfilled, if it is not then an error is reported. Each check method should have a corresponding report method (though you can have report methods without a matching check method).
