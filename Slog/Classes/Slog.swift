@@ -57,16 +57,31 @@ open class Slog {
         return df
     }()
 
+    /// The name of the log, used to differentiate multiple logs, if not initialized it is set to "".
+    fileprivate let name: String
+
     // MARK: Init
+
+
+    /// Initialize the log
+    ///
+    /// - Parameters:
+    ///   - name: name of the log
+    ///   - level: The minimum log level (.verbose for all)
+    ///   - useEmoji: If true, use emoji as part of logging
+    public init(name: String, level: Level, useEmoji: Bool = false) {
+        self.name = name
+        self.logLevel = level
+        self.useEmoji = useEmoji
+    }
 
     /// Initialize the Log
     ///
     /// - Parameters:
     ///   - level: The minimum log level (.verbose for all)
     ///   - useEmoji: If true, use emoji as part of logging
-    public init(level: Level, useEmoji: Bool = false) {
-        self.logLevel = level
-        self.useEmoji = useEmoji
+    public convenience init(level: Level, useEmoji: Bool = false) {
+        self.init(name: "", level: level, useEmoji: useEmoji)
     }
 
     // MARK: Log Methods
@@ -96,7 +111,10 @@ open class Slog {
             let date = dateformatter.string(from: Date())
             let components: [String] = fileName.components(separatedBy: "/")
             let objectName = components.last ?? "Unknown Object"
-            let levelString = useEmoji ? level.emoji : "|" + level.name.uppercased() + "|"
+            var levelString = useEmoji ? level.emoji : "|" + level.name.uppercased() + "|"
+            if name.characters.count > 0 {
+                levelString = levelString + "|" + name + "|"
+            }
             print("\(levelString)\(date) \(objectName) \(functionName) line \(line):\n\(object())\n")
         }
     }
