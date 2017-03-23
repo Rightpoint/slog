@@ -13,4 +13,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'Slog/Classes/**/*'
+
+  s.subspec 'LogOnly' do |logOnly|
+    logOnly.source_files = 'Slog/Classes/Slog.*'
+  end
+
 end
