@@ -87,7 +87,7 @@ pod "Slog/LogOnly"
 ```
 ## Author
 
-johnstricker, john.stricker@raizlabs.com
+John Stricker, john.stricker@raizlabs.com
 
 ## License
 
