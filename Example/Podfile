@@ -5,7 +5,5 @@ target 'Slog_Example' do
 
   target 'Slog_Tests' do
     inherit! :search_paths
-
-    
   end
 end

@@ -6,8 +6,4 @@ let log = Slog(name: "TEST", level: .verbose, useEmoji: true)
 
 log.error("Here's an error")
 
-let index = 1000
-let array = ["One", "Two", "Three"]
-
-log.check(index: index, isWithinBoundsOf: array)
 
