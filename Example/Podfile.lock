@@ -1,5 +1,5 @@
 PODS:
-  - Slog (0.1.0)
+  - Slog (0.3.0)
 
 DEPENDENCIES:
   - Slog (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Slog: 7bba6456ad593b406a80d27f37080cc35c4c7172
+  Slog: 4512ab4ad4d08b2a0eb61b49c85576fe195c122a
 
 PODFILE CHECKSUM: 617067a7c37313c25337da2bed6e822250e357d0
 
