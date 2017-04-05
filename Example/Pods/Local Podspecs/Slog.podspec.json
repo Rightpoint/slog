@@ -1,6 +1,6 @@
 {
   "name": "Slog",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "summary": "Simple Swift logging",
   "description": "Simple swift logging",
   "homepage": "https://github.com/Raizlabs/Slog",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Raizlabs/Slog.git",
-    "tag": "0.1.0"
+    "tag": "0.3.0"
   },
   "platforms": {
     "ios": "9.0"

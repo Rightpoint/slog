@@ -9,7 +9,7 @@ A simple Swift logging library.
 
 ## Basic use
 
-Initialize with a default level:
+Initialize with a default level, and if emojis should be included in logs:
 ```Swift-3
 let log = Slog(level: .warn)
 ```
@@ -22,28 +22,22 @@ Then you can log with functions for each of the log levels (with their associate
 * ⁉️ &nbsp; error
 * off
 
-The use of emojis defaults to `true`, you can set it to false either during initialization or by setting the `useEmoji` instance var.  
-
 For example:
-
-```swift
+```Swift-3
 log.error("This is an error!")
 ```
 Setting the level of a log will only print out those logs at that level or above.
-
-```swift
+```Swift-3
 log.level = .verbose
 ```
 You can also initialize a log with a name. You may want to have different logs for App Lifecycle, API, UI, Data, etc. This would allow you to have different logs & set different log levels depending upon what you are trying to monitor or track down. The log name will be printed out as part of any log message for that log.
-
-```swift
+```Swift-3
 let lifeCycleLog = Slog(name:"LifeCycle", level: .verbose, useEmoji: true)
 ```
 
 You could use this log in the AppDelegate to monitor app lifecycles. For example putting this code in `didFinishLaunchingWithOptions`:
-
-```swift
-lifeCycleLog.verbose("App finished launching with options \(String(description: launchOptions))")
+```Swift-3
+lifeCycleLog.verbose("App finished launching with options \(launchOptions)")
 ```
 
 would print:
@@ -52,6 +46,8 @@ would print:
 📖|LifeCycle|2017-03-23 10:55:37.193 AppDelegate.swift application(_:didFinishLaunchingWithOptions:) line 22:
 App did finish launching with options: nil
 ```
+
+You can turn off the emoji use during initialization of the log or by setting the log's instance var `useEmoji` to false.
 
 ## Example Project
 
@@ -67,14 +63,12 @@ pod "Slog"
 ```
 
 If you don't want to use the check and report features, then you can use the LogOnly subspec:
-
 ```ruby
 pod "Slog/LogOnly"
 ```
-
 ## Author
 
-John Stricker, john.stricker@raizlabs.com
+johnstricker, john.stricker@raizlabs.com
 
 ## License
 
