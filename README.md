@@ -11,7 +11,7 @@ A simple Swift logging library.
 
 Initialize with a default level, and if emojis should be included in logs:
 ```Swift-3
-let log = Slog(level: .warn, useEmoji: true)
+let log = Slog(level: .warn)
 ```
 
 Then you can log with functions for each of the log levels (with their associated emoji):
@@ -47,26 +47,7 @@ would print:
 App did finish launching with options: nil
 ```
 
-## Check and Report (under development)
-Checks are designed to check if a condition is fulfilled, if it is not then an error is reported. Each check method should have a corresponding report method (though you can have report methods without a matching check method).
-
-This is currently under development, so feel free to suggest new checks & reports as issues (or PRs).
-
-### Checks
-```Swift-3
-  // index is within the bounds of an array
-  check(index:, isInBoundsOf:)
-```
-
-### Reports
-```Swift-3
-  // index is out of bounds of an array
-  report(index:, outOfBoundsOf: )
-
-  // unxpected nil for a variable
-  report(unexpectedNil:)
-```
-
+You can turn off the emoji use during initialization of the log or by setting the log's instance var `useEmoji` to false.
 
 ## Example Project
 
