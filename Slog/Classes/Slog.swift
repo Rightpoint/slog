@@ -46,8 +46,8 @@ open class Slog {
     /// The log level, defaults to .Off
     public var logLevel: Level = .off
 
-    /// If true, prints emojis to signify log type, defaults to off
-    public var useEmoji: Bool = false
+    /// If true, prints emojis to signify log type, defaults to true
+    public var useEmoji: Bool = true
 
     // MARK: Private
     /// Date formatter for log
@@ -69,7 +69,7 @@ open class Slog {
     ///   - name: name of the log
     ///   - level: The minimum log level (.verbose for all)
     ///   - useEmoji: If true, use emoji as part of logging
-    public init(name: String, level: Level, useEmoji: Bool = false) {
+    public init(name: String, level: Level, useEmoji: Bool = true) {
         self.name = name
         self.logLevel = level
         self.useEmoji = useEmoji
@@ -80,7 +80,7 @@ open class Slog {
     /// - Parameters:
     ///   - level: The minimum log level (.verbose for all)
     ///   - useEmoji: If true, use emoji as part of logging
-    public convenience init(level: Level, useEmoji: Bool = false) {
+    public convenience init(level: Level, useEmoji: Bool = true) {
         self.init(name: "", level: level, useEmoji: useEmoji)
     }
 
