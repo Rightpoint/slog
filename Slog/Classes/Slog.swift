@@ -49,13 +49,14 @@ open class Slog {
     /// If true, prints emojis to signify log type, defaults to true
     public var useEmoji: Bool = true
 
-    // MARK: Private
     /// Date formatter for log
-    fileprivate let dateformatter: DateFormatter = {
+    public var dateFormatter: DateFormatter = {
         let df = DateFormatter()
         df.dateFormat = "Y-MM-dd H:m:ss.SSS"
         return df
     }()
+
+    // MARK: Private
 
     /// The name of the log, used to differentiate multiple logs, if not initialized it is set to "".
     fileprivate let name: String
@@ -108,7 +109,7 @@ open class Slog {
     /// Generic log method
     fileprivate func log<T>(_ object: @autoclosure () -> T, level: Slog.Level, _ fileName: String, _ functionName: String, _ line: Int) {
         if logLevel.rawValue <= level.rawValue {
-            let date = dateformatter.string(from: Date())
+            let date = dateFormatter.string(from: Date())
             let components: [String] = fileName.components(separatedBy: "/")
             let objectName = components.last ?? "Unknown Object"
             var levelString = useEmoji ? level.emoji : "|" + level.name.uppercased() + "|"
