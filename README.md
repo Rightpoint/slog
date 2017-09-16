@@ -62,10 +62,6 @@ it, simply add the following line to your Podfile:
 pod "Slog"
 ```
 
-If you don't want to use the check and report features, then you can use the LogOnly subspec:
-```ruby
-pod "Slog/LogOnly"
-```
 ## Author
 
 johnstricker, john.stricker@raizlabs.com
