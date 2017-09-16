@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Slog'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'Simple Swift logging'
   s.description      = <<-DESC
     Simple swift logging
@@ -13,4 +13,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'Slog/Classes/**/*'
+
+  s.subspec 'LogOnly' do |logOnly|
+    logOnly.source_files = 'Slog/Classes/Slog.*'
+  end
+
 end
